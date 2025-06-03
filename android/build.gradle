@@ -25,7 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 31
+    namespace 'com.homex.open_mail_app'
+    compileSdkVersion 34
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -35,6 +36,11 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
